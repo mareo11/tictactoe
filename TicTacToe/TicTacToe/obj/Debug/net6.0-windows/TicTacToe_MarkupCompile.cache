@@ -1,5 +1,5 @@
 ﻿TicTacToe
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Mateusz\Desktop\blablabla\wpf\TicTacToe\TicTacToe\TicTacToe\App.xaml
-1-1644662438
+11407045341
 
-7-558341286
+3-1233169557
 194-200944676
-Views\MainWindow.xaml;
+MainWindow.xaml;
 
-True
+False
 
