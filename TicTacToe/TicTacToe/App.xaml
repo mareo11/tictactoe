@@ -4,6 +4,28 @@
              xmlns:local="clr-namespace:TicTacToe"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="NewGameButtonStyle" TargetType="Button" BasedOn="{StaticResource { x:Type Button}}">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Margin" Value="15" />
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="HorizontalContentAlignment" Value="left" />
+        </Style>
+
+        <Style x:Key="GameButtonStyle" TargetType="Button" BasedOn="{StaticResource { x:Type Button}}">
+            <Setter Property="FontSize" Value="55" />
+            <Setter Property="Margin" Value="15" />
+            <Setter Property="Width" Value="auto" />
+            <Setter Property="Height" Value="auto" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="IsEnabled" Value="False" />
+        </Style>
+
+        <Style x:Key="RadioButtonStyle" TargetType="RadioButton" BasedOn="{StaticResource {x:Type RadioButton}}">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>

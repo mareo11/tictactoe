@@ -5,8 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="850">
+
+   
+    
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button  Style="{StaticResource NewGameButtonStyle}" Command="{Binding NewGameCommand}" Content="Nowa Gra"></Button>
+        
+
+        <Label Grid.Column="1" Grid.ColumnSpan="2"  Content="{Binding GameStatus}" HorizontalContentAlignment="Center" Margin="10" FontSize="25" ></Label>
+
+        <StackPanel x:Name="SelectLevel" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <RadioButton x:Name="PlayHumanRadioButton" Style="{StaticResource RadioButtonStyle}"
+                             Content="Play 1x1"></RadioButton>
+                <RadioButton x:Name="PlayComputerEasyRadioButton" Grid.Column="1" Style="{StaticResource RadioButtonStyle}" 
+                             Content="Easy"></RadioButton>
+                <RadioButton x:Name="PlayComputerMediumRadioButton" Grid.Row="1" Grid.Column="1" Style="{StaticResource RadioButtonStyle}"  
+                             Content="Medium"></RadioButton>
+                <RadioButton x:Name="PlayComputerHardRadioButton" Grid.Row="1" Style="{StaticResource RadioButtonStyle}"
+                             Content="Hard"></RadioButton>
+
+            </Grid>
+        </StackPanel>
+
+        <Border Width="700" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button  Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button  Grid.Column="1" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button  Grid.Column="2" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                
+                <Button Grid.Row="1" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+
+                <Button Grid.Row="2" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+                <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource GameButtonStyle}" Command="{Binding TicTacToeCommand}" 
+                Content="{Binding TicTacToeContent}"></Button>
+
+                
+
+            </Grid>
+        </Border>
+        
 
     </Grid>
 </Window>
